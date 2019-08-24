@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<nav id="navbar">
+  	<header>Atlaskit Documentation (Contributing)</header>
+  		<ul>
+  		  <li><a class="nav-link" href="#Code_of_Conduct">Code of Conduct</a></li>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#Prerequisites">Prerequisites</a></li>
+        <li><a class="nav-link" href="#Open_source_contribution_model">Open source contribution model</a></li>
+  		  <li><a class="nav-link" href="#Inter-team_contribution_model">Inter-team contribution model</a></li>
+        <li><a class="nav-link" href="#Contribution_checklist">Contribution checklist</a></li>
+        <li><a class="nav-link" href="#Directory_structure">Directory structure</a></li>
+        <li><a class="nav-link" href="#Adding_new_icons">Adding New Icons</a></li>
+        <li><a class="nav-link" href="#Committing_code_&_releasing_packages">Committing code & releasing packages</a></li>
+        <li><a class="nav-link" href="#Versioning">Versioning</a></li>
+      </ul>
+  </nav>
+
+
+  <main id="main-doc">
+    <section class="main-section" id="Code_of_Conduct">
+      <header>Code of Conduct</header>
+        <article>
+          <p>This project is bound by a
+            <a href="https://bitbucket.org/atlassian/atlaskit-mk-2/src/HEAD/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a>.
+          </p>
+        </article>
+    </section>
+
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+        <article>
+          <p>Although it's our job to look after all the components in our repo, we rely heavily on contributions outside of our team to make Atlaskit great. At its core, our contribution model is very much like contributing to any open source library, but because we get several contributions from within Atlassian from other teams, we have the ability to build on that model to help make inter-team contributions more efficient.
+          </p>
+        </article>
+    </section>
+
+    <section class="main-section" id="Prerequisites">
+      <header>Prerequisites</header>
+        <article>
+          <p>Before you can start making contributions to Atlaskit, you will need to be granted contributor permissions to the Atlaskit repo. Contributors are given permission to create branches and pull requests.
+          </p>
+          <p>Follow the instructions under the 'Become a contributor' section of our
+          <a href="https://bitbucket.org/atlassian/atlaskit-mk-2/src/HEAD/CONTRIBUTING.md"target="_blank"><code>CONTRIBUTING.md</code></a> guide in order to receive these permissions to contribute to the Atlaskit repo.
+          </p>
+        </article>
+    </section>
+
+    <section class="main-section" id="Open_source_contribution_model">
+      <header>Open source contribution model</header>
+        <article>
+          <p>We want to keep this model very simple. At its core, we make the assumption that developers looking to contribute will look at the <a href="https://bitbucket.org/atlassian/atlaskit-mk-2/src/HEAD/README.md" target="_blank"><code>README.md</code></a> and thus be directed to the <a href="https://bitbucket.org/atlassian/atlaskit-mk-2/src/HEAD/CONTRIBUTING.md" target="_blank"><code>CONTRIBUTING.md</code></a> .Both of these files are widely known as convention in open source projects and we think that developers will be able to direct themselves there.
+          </p>
+          <p>The process consists of:</p>
+            <ol>
+              <li>Raise an issue for discussion. This step may not even be necessary as this could all be done in a PR, depending on if the contributor is willing to lose work if the contribution doesn't get accepted.</li>
+              <li>Submit a PR resolving the raised issue.</li>
+            </ol>
+
+            <p>This is very simple and the PR guidelines can be derived from the rest of our conventions and documentation. This is also compatible with the inter-team model, because, at the very worst, internal teams would still be able to follow this process.
+            </p>
+
+            <p>The only real downsides here are that:</p>
+              <ol>
+                <li>It can take longer to yield a merge due to async discussions.</li>
+                <li>Discovery of contribution need is mostly up to the contributor, unless we reach out to them.</li>
+              </ol>
+
+            <p>The inter-team model expands on the open source model to make this process more efficient because we have the privilege of working with internal teams in such a way.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Inter-team_contribution_model">
+        <header>Inter-team contribution model</header>
+          <article>
+            <p>Like the open source model, the inter-team contribution model is kept as light as possible and is designed for compatibility with it so that, at worst, we can fallback to the open source model as teams in other timezones may not be able to meet as easily.</p>
+            <p>The different aspects of the inter-team contribution are the following:</p>
+              <ul>
+                <li>Introduction</li>
+                <li>Initial discussion</li>
+                <li>Regular catch-ups</li>
+                <li>Shepherd involvement</li>
+                <li>Tracking</li>
+                <li>Contribution requirements</li>
+                <li>Handover and maintenance</li>
+              </ul>
+          </article>
+      </section>
+
+      <section class="main-section" id="Contribution_checklist">
+        <header>Contribution checklist</header>
+          <article>
+            <p>Prior to contributing, please make sure you have created an issue to discuss the contribution following our <a href="https://atlaskit.atlassian.com/docs/guides/contributing" target="_blank">guide</a>.</p>
+
+            <p>We rely heavily on contributions outside of our team to make Atlaskit great. In order to maintain a high bar of quality for Atlaskit, we've laid out a few things that we want to make sure are covered in each contribution.</p>
+          </article>
+      </section>
+
+
+      <section class="main-section" id="Directory_structure">
+        <header>Directory structure</header>
+          <article>
+            <p>Related reading:</p>
+              <ul>
+                <li><a href="https://atlaskit.atlassian.com/docs/guides/component-design" target="_blank">Component design</a></li>
+              </ul>
+
+              <p>The top-level directory structure for Atlaskit looks like the following diagram:</p>
+
+              <p class="flex">
+                <span class="item">
+                1 
+                2
+                3
+                4
+                5
+                6
+                7
+                8
+                9 
+                </span>
+                
+
+                  <code class="test">
+                    Atlaskit
+                    ├─ build ·········· Build packages
+                    ├─ docs ··········· Project documentation
+                    ├─ flow-typed ····· Flow types for untyped dependencies
+                    ├─ packages ······· Public packages
+                    ├─ releases ······· Release documentation
+                    ├─ typings ········ Exported Flow / TypeScript types
+                    ├─ website ········ Website package
+                    └─ package.json ··· Project config
+                  </code>
+              </p>
+            </article>
+        </section>
+
+
+        <section class="main-section" id="Adding_new_icons">
+          <header>Adding New Icons</header>
+            <article>
+              <p>!!IMPORTANT</p>
+              <p>The icons package has a custom build process, as it generates its both stripped svgs and glyphs that are committed to the repo, so that they can be accessed as paths when published.</p>
+              <p>Adding or updating a new icon:</p>
+                <ul>
+                  <li>Add / update the icon under <code>packages/core/icon/svgs_raw</code></li>
+                  <li>Then run <code>yarn update:icons</code></li>
+                </ul>
+
+                <p>This will:</p>
+                <ul>
+                  <li>build <code>@atlaskit/icon</code></li>
+                  <li>build <code>@atlaskit/icon-object</code></li>
+                  <li>build <code>@atlaskit/icons-file-type</code></li>
+                  <li>build <code>@atlaskit/reduced-ui-pack</code></li>
+                </ul>
+                
+                <p>Once these are built you should:</p>
+                  <ul>
+                    <li>Add your new icon to the list of icons in <code>packages/css-packs/reduced-ui-pack/src/internal/iconIds.js</code></li>
+                    <li>Add your new icon to the list of icons in <code>packages/core/icon/src/components/__tests__/unit/indexSpec.js</code></li>
+                    <li>Locally check that the new/updated icons are rendered correctly on the website in <code>@atlaskit/icon</code></li>
+                    <li>Locally check that the new/updated icons are rendered correctly on the website in  <code>@atlaskit/reduced-ui-pack</code></li>
+                  </ul>
+
+                  <p>If your icon is used only in a specific context or product, place it in <code>/svgs_raw/{subfolder}</code> and it will be namespaced appropriately.</p>
+
+                  <p>Once your new icon is committed, make sure to include the maintainers of the <code>@atlaskit/icon</code> package in your PR.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Committing_code_&_releasing_packages">
+          <header>Committing code & releasing packages</header>
+              <article>
+                  <p><code>git add .</code></p>
+                  <p><code>git commit -m "your message here"</code></p>
+                  <p>This will run prettier over your changed files before doing a commit.</p>
+                  <p>Packages that have been changed will not automatically be released. Instead, you need to create a changeset. A changeset is an empty commit that informs the release process of what packages to release. Generating a changeset is done through a command, that walks you through the choices you need to make.</p>
+
+                  <p>To start creating a changeset, you need to run</p>
+
+                  <p>Start creating a changeset <code>bolt changeset</code></p>
+
+              </article>
+        </section>
+
+        <section class="main-section" id="Versioning">
+          <header>Versioning</header>
+            <article>
+              <p>Related reading:</p>
+              <ul>
+                <li><a href="https://atlaskit.atlassian.com/docs/guides/releasing-packages">Releasing packages</a></li>
+              </ul>
+
+              <blockquote>
+                <p>"All components must follow <a href="https://semver.org/" target="_blank">Semver</a>. For new components they should start in what's called "dev releases" at 0.0.0. While a component is in dev releases, it is considered unstable and not bound by normal Semver rules for versions above the first major release (1.0.0)."</p>
+              </blockquote>
+
+              <blockquote>
+                <p>"Although Semver leaves dev releases open to do anything you want, we will only make breaking changes in minor versions (i.e. 0.1.0). Features and non-breaking patches will still go into their normal versions. Basically, we still follow Semver in dev releases except that breaking changes go into minor releases."</p>
+              </blockquote>
+
+              <p>For the sake of keeping things simple, refer to the <a href="https://semver.org/" target="_blank">Semver spec</a> for anything this document does not cover.</p>
+            </article>
+        </section>
+  </main>
+</html>
